@@ -22,11 +22,60 @@
  .footer{
     grid-area: footer;
  }
- .container{
-      display: grid;
+ .container {
+  display: grid;
+  grid-template-areas: 
+    "header header header header"
+    "nav main main sidebar"
+    "nav main main advertising"
+    "footer footer footer footer";
+
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-template-rows: auto 1fr 1fr auto;
+  gap: 10px;
+}
+
+/*  Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .container {
     grid-template-areas: 
-        "header header header header"
-        "nav main main sidebar"
-        "nav main main advertising"
-        "footer footer footer footer";
- }
+      "header"
+      "nav"
+      "main"
+      "sidebar"
+      "advertising"
+      "footer";
+
+    grid-template-columns: 1fr;  
+    grid-template-rows: auto;     
+  }
+}
+
+/*  Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    grid-template-areas: 
+      "header header"
+      "nav nav"
+      "main main"
+      "sidebar advertising"
+      "footer footer";
+
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+  }
+}
+
+/*  Desktop (900px+) */
+@media (min-width: 901px) {
+  .container {
+    grid-template-areas: 
+      "header header header header"
+      "nav main main sidebar"
+      "nav main main advertising"
+      "footer footer footer footer";
+
+    grid-template-columns: 1fr 2fr 2fr 1fr; 
+    grid-template-rows: auto 1fr 1fr auto;
+  }
+}
