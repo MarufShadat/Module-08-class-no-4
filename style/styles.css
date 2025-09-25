@@ -1,0 +1,23 @@
+.header{
+    background-color: rgb(243, 235, 224);
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(158, 241, 241);
+}
+.Nav, li { 
+    background-color: burlywood; 
+    list-style: none;
+     justify-content: center; 
+     align-items: center;
+     }
+.nav{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.Nav, .sidebar, .adverstising {
+    border-radius: 10px;
+}
